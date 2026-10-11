@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <!-- net6.0: Emby Server native installs still run on the .NET 6 runtime,
+         which cannot load net8.0 assemblies. See docs/adr/ADR-001-framework.md. -->
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <Version>0.1.1</Version>
+    <!-- Emby derives the ETag of plugin settings pages from the plugin version, so a
+         rebuilt DLL with an unchanged version is served as "304 Not Modified" and browsers
+         keep the old page. Every deployable build must therefore carry a new revision:
+         CI passes the run number, tools/deploy-test.sh a timestamp. -->
+    <BuildRevision Condition="'$(BuildRevision)' == ''">0</BuildRevision>
+    <AssemblyVersion>$(Version).$(BuildRevision)</AssemblyVersion>
+    <FileVersion>$(Version).$(BuildRevision)</FileVersion>
+    <Authors>EmbyTube contributors</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <EmbySdkVersion>4.9.1.90</EmbySdkVersion>
+  </PropertyGroup>
+</Project>

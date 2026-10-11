@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>EmbyTube.Providers.Pornhub</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmbyTube.Core\EmbyTube.Core.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+.idea/
+*.user
+TestResults/
+artifacts/
+# Local Emby test server data (never commit)
+.emby-test/

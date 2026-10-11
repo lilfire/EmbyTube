@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Emby-independent contracts and infrastructure. Must never reference the Emby SDK. -->
+  <PropertyGroup>
+    <RootNamespace>EmbyTube.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="EmbyTube.Core.Tests" />
+  </ItemGroup>
+</Project>

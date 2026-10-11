@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - run: dotnet restore
+      - run: dotnet build -c Release --no-restore -p:BuildRevision=${{ github.run_number }}
+      - run: dotnet test -c Release --no-build --logger "trx;LogFileName=results.trx"
+      - name: Verify single-DLL package
+        run: |
+          out=src/EmbyTube.Plugin/bin/Release/net6.0
+          ls -la "$out"
+          if ls "$out"/*.dll | grep -v '/EmbyTube.dll$'; then echo "unexpected DLLs in output" && exit 1; fi
+          sha256sum "$out/EmbyTube.dll" | tee EmbyTube.dll.sha256
+      - name: Vulnerable / deprecated packages
+        run: dotnet list package --vulnerable --include-transitive
+      - uses: actions/upload-artifact@v4
+        with:
+          name: EmbyTube
+          path: |
+            src/EmbyTube.Plugin/bin/Release/net6.0/EmbyTube.dll
+            EmbyTube.dll.sha256

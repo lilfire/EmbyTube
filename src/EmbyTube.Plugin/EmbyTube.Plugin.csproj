@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    The deployable Emby plugin. To ship a single DLL (ADR-001), the Emby-independent
+    projects are compiled *into* this assembly by linking their sources instead of
+    referencing them. The separate projects still exist so the compiler enforces that
+    Core/Application/Providers never depend on the Emby SDK, and so tests can target them.
+  -->
+  <PropertyGroup>
+    <RootNamespace>EmbyTube.Plugin</RootNamespace>
+    <AssemblyName>EmbyTube</AssemblyName>
+    <!-- Emby supplies its own SDK assemblies at runtime; never copy them next to the plugin. -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\EmbyTube.Core\**\*.cs" Exclude="..\EmbyTube.Core\obj\**;..\EmbyTube.Core\bin\**" LinkBase="Linked\Core" />
+    <Compile Include="..\EmbyTube.Application\**\*.cs" Exclude="..\EmbyTube.Application\obj\**;..\EmbyTube.Application\bin\**" LinkBase="Linked\Application" />
+    <Compile Include="..\EmbyTube.Providers.Mock\**\*.cs" Exclude="..\EmbyTube.Providers.Mock\obj\**;..\EmbyTube.Providers.Mock\bin\**" LinkBase="Linked\Providers.Mock" />
+    <Compile Include="..\EmbyTube.Providers.XVideos\**\*.cs" Exclude="..\EmbyTube.Providers.XVideos\obj\**;..\EmbyTube.Providers.XVideos\bin\**" LinkBase="Linked\Providers.XVideos" />
+    <Compile Include="..\EmbyTube.Providers.XHamster\**\*.cs" Exclude="..\EmbyTube.Providers.XHamster\obj\**;..\EmbyTube.Providers.XHamster\bin\**" LinkBase="Linked\Providers.XHamster" />
+    <Compile Include="..\EmbyTube.Providers.Pornhub\**\*.cs" Exclude="..\EmbyTube.Providers.Pornhub\obj\**;..\EmbyTube.Providers.Pornhub\bin\**" LinkBase="Linked\Providers.Pornhub" />
+    <Compile Include="..\EmbyTube.Providers.Pornhat\**\*.cs" Exclude="..\EmbyTube.Providers.Pornhat\obj\**;..\EmbyTube.Providers.Pornhat\bin\**" LinkBase="Linked\Providers.Pornhat" />
+    <Compile Include="..\EmbyTube.Providers.Html\**\*.cs" Exclude="..\EmbyTube.Providers.Html\obj\**;..\EmbyTube.Providers.Html\bin\**" LinkBase="Linked\Providers.Html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\*.html" />
+    <EmbeddedResource Include="Configuration\*.js" />
+    <EmbeddedResource Include="thumb.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediaBrowser.Server.Core" Version="$(EmbySdkVersion)" ExcludeAssets="runtime" />
+    <PackageReference Include="MediaBrowser.Common" Version="$(EmbySdkVersion)" ExcludeAssets="runtime" />
+  </ItemGroup>
+</Project>

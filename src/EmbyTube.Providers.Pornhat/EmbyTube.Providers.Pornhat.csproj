@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>EmbyTube.Providers.Pornhat</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmbyTube.Core\EmbyTube.Core.csproj" />
+    <InternalsVisibleTo Include="EmbyTube.Provider.Tests" />
+  </ItemGroup>
+</Project>

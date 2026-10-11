@@ -1,0 +1,99 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5A8DAF28-18E5-4A54-82F7-8533B77E6785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Core", "src\EmbyTube.Core\EmbyTube.Core.csproj", "{49FAC612-A3B4-4F0F-A264-4F5C1061B7D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Application", "src\EmbyTube.Application\EmbyTube.Application.csproj", "{B2551300-CB60-4AC9-9019-8F590D57248E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Providers.Mock", "src\EmbyTube.Providers.Mock\EmbyTube.Providers.Mock.csproj", "{3A944DF3-4B20-4F2A-975B-5F290C745CE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Plugin", "src\EmbyTube.Plugin\EmbyTube.Plugin.csproj", "{4995D915-71AC-4220-9D85-F8ABEFCF7A79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C9EE2F80-AD05-431B-8D4C-4C61429916DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Core.Tests", "tests\EmbyTube.Core.Tests\EmbyTube.Core.Tests.csproj", "{024BCCD0-B3EB-4EDA-ACAD-789ECDB7C6E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Provider.Tests", "tests\EmbyTube.Provider.Tests\EmbyTube.Provider.Tests.csproj", "{045825D2-DBB7-40B8-9DF5-89408D97221D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Providers.XVideos", "src\EmbyTube.Providers.XVideos\EmbyTube.Providers.XVideos.csproj", "{2FA0029B-47C3-4742-AD84-40A6750775CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Providers.XHamster", "src\EmbyTube.Providers.XHamster\EmbyTube.Providers.XHamster.csproj", "{5E29413C-AB40-49B1-A00E-F8E49D290B3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Providers.Pornhub", "src\EmbyTube.Providers.Pornhub\EmbyTube.Providers.Pornhub.csproj", "{9BCB78AA-B5A5-4B47-8B8B-268D107D68A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Providers.Pornhat", "src\EmbyTube.Providers.Pornhat\EmbyTube.Providers.Pornhat.csproj", "{07B9D37B-0669-4FEA-91F8-0AFED9FF49EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyTube.Providers.Html", "src\EmbyTube.Providers.Html\EmbyTube.Providers.Html.csproj", "{9837FA7B-E662-43BB-999A-069A8F5C1532}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49FAC612-A3B4-4F0F-A264-4F5C1061B7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49FAC612-A3B4-4F0F-A264-4F5C1061B7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49FAC612-A3B4-4F0F-A264-4F5C1061B7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49FAC612-A3B4-4F0F-A264-4F5C1061B7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2551300-CB60-4AC9-9019-8F590D57248E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2551300-CB60-4AC9-9019-8F590D57248E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2551300-CB60-4AC9-9019-8F590D57248E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2551300-CB60-4AC9-9019-8F590D57248E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A944DF3-4B20-4F2A-975B-5F290C745CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A944DF3-4B20-4F2A-975B-5F290C745CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A944DF3-4B20-4F2A-975B-5F290C745CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A944DF3-4B20-4F2A-975B-5F290C745CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4995D915-71AC-4220-9D85-F8ABEFCF7A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4995D915-71AC-4220-9D85-F8ABEFCF7A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4995D915-71AC-4220-9D85-F8ABEFCF7A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4995D915-71AC-4220-9D85-F8ABEFCF7A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024BCCD0-B3EB-4EDA-ACAD-789ECDB7C6E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024BCCD0-B3EB-4EDA-ACAD-789ECDB7C6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024BCCD0-B3EB-4EDA-ACAD-789ECDB7C6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024BCCD0-B3EB-4EDA-ACAD-789ECDB7C6E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{045825D2-DBB7-40B8-9DF5-89408D97221D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045825D2-DBB7-40B8-9DF5-89408D97221D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045825D2-DBB7-40B8-9DF5-89408D97221D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045825D2-DBB7-40B8-9DF5-89408D97221D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA0029B-47C3-4742-AD84-40A6750775CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA0029B-47C3-4742-AD84-40A6750775CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA0029B-47C3-4742-AD84-40A6750775CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA0029B-47C3-4742-AD84-40A6750775CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E29413C-AB40-49B1-A00E-F8E49D290B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E29413C-AB40-49B1-A00E-F8E49D290B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E29413C-AB40-49B1-A00E-F8E49D290B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E29413C-AB40-49B1-A00E-F8E49D290B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BCB78AA-B5A5-4B47-8B8B-268D107D68A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BCB78AA-B5A5-4B47-8B8B-268D107D68A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BCB78AA-B5A5-4B47-8B8B-268D107D68A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BCB78AA-B5A5-4B47-8B8B-268D107D68A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B9D37B-0669-4FEA-91F8-0AFED9FF49EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B9D37B-0669-4FEA-91F8-0AFED9FF49EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B9D37B-0669-4FEA-91F8-0AFED9FF49EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B9D37B-0669-4FEA-91F8-0AFED9FF49EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9837FA7B-E662-43BB-999A-069A8F5C1532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9837FA7B-E662-43BB-999A-069A8F5C1532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9837FA7B-E662-43BB-999A-069A8F5C1532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9837FA7B-E662-43BB-999A-069A8F5C1532}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{49FAC612-A3B4-4F0F-A264-4F5C1061B7D3} = {5A8DAF28-18E5-4A54-82F7-8533B77E6785}
+		{B2551300-CB60-4AC9-9019-8F590D57248E} = {5A8DAF28-18E5-4A54-82F7-8533B77E6785}
+		{3A944DF3-4B20-4F2A-975B-5F290C745CE5} = {5A8DAF28-18E5-4A54-82F7-8533B77E6785}
+		{4995D915-71AC-4220-9D85-F8ABEFCF7A79} = {5A8DAF28-18E5-4A54-82F7-8533B77E6785}
+		{024BCCD0-B3EB-4EDA-ACAD-789ECDB7C6E8} = {C9EE2F80-AD05-431B-8D4C-4C61429916DD}
+		{045825D2-DBB7-40B8-9DF5-89408D97221D} = {C9EE2F80-AD05-431B-8D4C-4C61429916DD}
+		{2FA0029B-47C3-4742-AD84-40A6750775CE} = {5A8DAF28-18E5-4A54-82F7-8533B77E6785}
+		{5E29413C-AB40-49B1-A00E-F8E49D290B3E} = {5A8DAF28-18E5-4A54-82F7-8533B77E6785}
+		{9BCB78AA-B5A5-4B47-8B8B-268D107D68A4} = {5A8DAF28-18E5-4A54-82F7-8533B77E6785}
+		{07B9D37B-0669-4FEA-91F8-0AFED9FF49EA} = {5A8DAF28-18E5-4A54-82F7-8533B77E6785}
+		{9837FA7B-E662-43BB-999A-069A8F5C1532} = {5A8DAF28-18E5-4A54-82F7-8533B77E6785}
+	EndGlobalSection
+EndGlobal

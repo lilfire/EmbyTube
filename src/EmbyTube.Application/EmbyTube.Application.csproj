@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Orchestration, navigation, caching and playback selection. Emby-independent. -->
+  <PropertyGroup>
+    <RootNamespace>EmbyTube.Application</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmbyTube.Core\EmbyTube.Core.csproj" />
+  </ItemGroup>
+</Project>
